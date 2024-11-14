@@ -1,11 +1,19 @@
+import { Link } from "react-router-dom";
 // import styles from './App.module.css'
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link></li>
+          <li>Shop</li>
+          <li>Cart</li>
+        </ul>
+      </nav>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

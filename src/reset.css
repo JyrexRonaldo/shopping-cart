@@ -39,3 +39,7 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  ol, ul {
+	list-style: none;
+}
