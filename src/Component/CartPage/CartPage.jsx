@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
-// import styles from './Card.module.css'
+// import styles from './CartPage.module.css'
 
-function Card() {
+function CartPage() {
     return (
       <>
-        <h1>Card</h1>
+        <h1>Cart Page</h1>
         <Link to="/">Index</Link>
       </>
     )
   }
   
-  export default Card
+  export default CartPage
   

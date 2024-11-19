@@ -7,9 +7,11 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link></li>
-          <li>Shop</li>
-          <li>Cart</li>
+            <Link to="/home">Home</Link></li>
+            <li>
+            <Link to="/shop">Shop</Link></li>
+            <li>
+            <Link to="/cart">Cart</Link></li>
         </ul>
       </nav>
     </>
