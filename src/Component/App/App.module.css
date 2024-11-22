@@ -1,1 +1,8 @@
 
+.navBar {
+ 
+}
+
+.navBar ul {
+    display: flex;
+}
