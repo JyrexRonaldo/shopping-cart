@@ -1,0 +1,25 @@
+.homePage {
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.homePage > div {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.homePage > div > div {
+    /* text-align: left; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

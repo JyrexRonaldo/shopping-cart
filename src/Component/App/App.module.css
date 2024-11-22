@@ -1,8 +1,25 @@
+.app {
+  background-image: url(../../../public/background.jpg);
+  background-size: cover;
+  height: 100vh;
+}
 
 .navBar {
- 
+  background-color: rgb(0, 0, 0);
+  color: white;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
 }
 
 .navBar ul {
-    display: flex;
+  display: flex;
+  /* justify-items: end; */
+  gap: 15px;
+}
+
+.navBar a {
+  color: white;
 }

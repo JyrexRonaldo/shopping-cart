@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom"
-// import styles from './HomePage.module.css'
+import { Link } from "react-router-dom";
+import styles from "./HomePage.module.css";
 
 function HomePage() {
-    return (
-      <>
-        <h1>Home page</h1>
-        <Link to="/">Index</Link>
-      </>
-    )
-  }
-  
-  export default HomePage
-  
+  return (
+    <div className={styles.homePage}>
+      <div>
+        <div>
+          <p>Shop</p>
+          <p>Suburban</p>
+        </div>
+        <Link to="/shop">
+          <button type="button">Shop Now</button>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default HomePage;
