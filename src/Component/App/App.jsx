@@ -1,11 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
-import styles from './App.module.css'
+import styles from "./App.module.css";
 
 function App() {
   return (
     <div className={styles.app}>
       <nav className={styles.navBar}>
-      <p>Suburban</p>
+        <p>Suburban</p>
         <ul>
           <li>
             <Link to="/">Home</Link>

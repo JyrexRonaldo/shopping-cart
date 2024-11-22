@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
 // import styles from './Card.module.css'
 
 function Card() {
     return (
-      <>
-        <h1>Card</h1>
-        <Link to="/">Index</Link>
-      </>
+      <div>
+        <img src="" alt="" />
+        <p></p>
+        <p></p>
+        <input type="number"  />
+        <button type="button">Add to Cart</button>
+      </div>
     )
   }
   
