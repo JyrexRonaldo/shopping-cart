@@ -1,7 +1,34 @@
 import { Link, Outlet } from "react-router-dom";
 import styles from "./App.module.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const useProductsData = () => {
+    const [productsData, setProductsData] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      fetch("https://fakestoreapi.com/products")
+        .then((response) => {
+          if (response.status >= 400) {
+            throw new Error("server error");
+          }
+          return response.json();
+        })
+        .then((response) => setProductsData(response))
+        .catch((error) => setError(error))
+        .finally(() => setLoading(false));
+    }, []);
+
+    return [productsData, error, loading] ;
+  };
+
+  const productsData = useProductsData()
+
+
+
+
   return (
     <div className={styles.app}>
       <nav className={styles.navBar}>
@@ -18,7 +45,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Outlet />
+      <Outlet context={productsData}/>
     </div>
   );
 }
