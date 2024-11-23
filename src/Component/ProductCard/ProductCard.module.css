@@ -1,0 +1,35 @@
+.card {
+    width: 300px;
+    height: 400px;
+    padding: 15px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card > div {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.card > p:nth-of-type(1) {
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    width: max-width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

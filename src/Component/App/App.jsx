@@ -32,7 +32,7 @@ function App() {
   return (
     <div className={styles.app}>
       <nav className={styles.navBar}>
-        <p>Suburban</p>
+        <Link to="/"><p>Suburban</p></Link>
         <ul>
           <li>
             <Link to="/">Home</Link>
