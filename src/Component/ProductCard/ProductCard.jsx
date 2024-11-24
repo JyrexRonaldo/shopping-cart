@@ -13,10 +13,13 @@ function ProductCard({ imgURL, title, price, cardId }) {
 
   function handleAddToCart() {
     if (quantity < 1) {
-      alert("Quantity can't be less than 1")
-      return
+      alert("Quantity can't be less than 1");
+    } else if (!Object.keys(cartItems).includes(cardId.toString())) {
+      setCartItems({ ...cartItems, ...{ [cardId]: +quantity } });
+    } else {
+      cartItems[cardId] += +quantity;
+      setCartItems({ ...cartItems });
     }
-    setCartItems({ ...cartItems, ...{ [cardId]: quantity } });
   }
 
   return (

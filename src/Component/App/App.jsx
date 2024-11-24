@@ -26,6 +26,15 @@ function App() {
 
   const [cartItems, setCartItems] = useState({});
 
+  let totalCartItems = 0
+
+  for (const key in cartItems) {
+    if (Object.prototype.hasOwnProperty.call(cartItems, key)) {
+      totalCartItems += +cartItems[key]
+      
+    }
+  }
+
   const outletData = { ...useProductsData(), cartItems, setCartItems };
 
   return (
@@ -42,7 +51,7 @@ function App() {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart {`(${totalCartItems})`}</Link>
           </li>
         </ul>
       </nav>
