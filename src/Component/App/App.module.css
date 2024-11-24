@@ -16,7 +16,6 @@
 
 .navBar ul {
   display: flex;
-  /* justify-items: end; */
   gap: 15px;
 }
 

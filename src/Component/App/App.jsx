@@ -21,18 +21,21 @@ function App() {
         .finally(() => setLoading(false));
     }, []);
 
-    return [productsData, error, loading] ;
+    return { productsData, error, loading };
   };
 
-  const productsData = useProductsData()
+  const [cartItems, setCartItems] = useState({});
 
+  console.log(cartItems);
 
-
+  const outletData = { ...useProductsData(), cartItems, setCartItems };
 
   return (
     <div className={styles.app}>
       <nav className={styles.navBar}>
-        <Link to="/"><p>Suburban</p></Link>
+        <Link to="/">
+          <p>Suburban</p>
+        </Link>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -45,7 +48,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Outlet context={productsData}/>
+      <Outlet context={outletData} />
     </div>
   );
 }
