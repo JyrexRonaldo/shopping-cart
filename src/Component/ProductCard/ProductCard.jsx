@@ -7,8 +7,8 @@ function ProductCard({ imgURL, title, price }) {
         <img src={imgURL} alt="" />
       </div>
       <p>{title}</p>
-      <p>{price}</p>
-      <input type="number" />
+      <p>{`$${price}`}</p>
+      <div>Quantity:<input type="number" /></div>
       <button type="button">Add to Cart</button>
     </div>
   );
