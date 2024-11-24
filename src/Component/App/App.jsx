@@ -26,8 +26,6 @@ function App() {
 
   const [cartItems, setCartItems] = useState({});
 
-  console.log(cartItems);
-
   const outletData = { ...useProductsData(), cartItems, setCartItems };
 
   return (

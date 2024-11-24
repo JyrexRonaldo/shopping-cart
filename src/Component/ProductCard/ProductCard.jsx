@@ -3,17 +3,19 @@ import styles from "./ProductCard.module.css";
 import { useOutletContext } from "react-router-dom";
 
 function ProductCard({ imgURL, title, price, cardId }) {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   function handleQuantityInput(e) {
-    setQuantity(+e.target.value);
+    setQuantity(e.target.value);
   }
 
   const { cartItems, setCartItems } = useOutletContext();
 
-  console.log(cartItems);
-
   function handleAddToCart() {
+    if (quantity < 1) {
+      alert("Quantity can't be less than 1")
+      return
+    }
     setCartItems({ ...cartItems, ...{ [cardId]: quantity } });
   }
 
