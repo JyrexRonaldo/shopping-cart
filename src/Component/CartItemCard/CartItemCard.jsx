@@ -8,7 +8,7 @@ function CartItemCard({ imgURL, title, price, quantity }) {
         <p>{title}</p>
         <p>Price: {`$${price}`}</p>
         <p>Quantity: {quantity}</p>
-        <p>Total: {price * quantity}</p>
+        <p>Total: {`$${price * quantity}`}</p>
       </div>
       <button type="button">Remove</button>
     </div>
