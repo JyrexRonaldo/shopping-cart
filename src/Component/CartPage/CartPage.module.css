@@ -1,4 +1,11 @@
 .cartPage {
-  background-color: rgba(240, 248, 255, 0.9);
-  height: 92vh;
+  background-color: white;
+  flex: 1;
+  /* height: 92vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 50px; */
 }

@@ -1,5 +1,5 @@
 .homePage {
-  height: 92vh;
+  flex: 1;
   display: flex;
   align-items: center;
   color: white;

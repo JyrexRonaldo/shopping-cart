@@ -5,6 +5,9 @@ import ProductCard from "../ProductCard/ProductCard";
 function ShopPage() {
   const { productsData, error, loading } = useOutletContext();
 
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>A network error was encountered</p>;
+
   let productCards = productsData.map((product) => {
     return (
       <ProductCard
@@ -16,9 +19,6 @@ function ShopPage() {
       />
     );
   });
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>A network error was encountered</p>;
 
   return <div className={styles.shopPage}>{productCards}</div>;
 }
