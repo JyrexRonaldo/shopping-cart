@@ -20,6 +20,7 @@ function ProductCard({ imgURL, title, price, cardId }) {
       cartItems[cardId] += +quantity;
       setCartItems({ ...cartItems });
     }
+    setQuantity(1)
   }
 
   return (
