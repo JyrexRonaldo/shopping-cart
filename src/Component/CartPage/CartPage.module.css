@@ -1,11 +1,36 @@
 .cartPage {
+  background-color: #EBEDED;
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 200px;
+}
+
+.cartPage h1 {
+  display: flex;
+  justify-content: center;
+}
+
+
+.cartPage > div:nth-child(1) {
   background-color: white;
   flex: 1;
-  /* height: 92vh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 30px;
-  padding: 30px 50px; */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 0px; 
+}
+
+.cartPage > div:nth-child(1) > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.cartPage > div:nth-child(2) {
+  background-color: white;
+  width: 300px;
 }

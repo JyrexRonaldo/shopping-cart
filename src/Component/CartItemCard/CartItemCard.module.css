@@ -23,5 +23,10 @@
 
   .cartItemCard > div:nth-of-type(2) {
     width: 300px;
-    
+  }
+
+  .cartItemCard > div:nth-of-type(3) {
+    width: 300px;
+    display: flex;
+    justify-content: center;
   }
