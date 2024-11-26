@@ -10,7 +10,7 @@ function CartPage() {
   console.log(cartItems);
 
   let cartItemCards = [];
-  let grandTotal = 0
+  let grandTotal = 0;
 
   for (const key in cartItems) {
     if (Object.prototype.hasOwnProperty.call(cartItems, key)) {
@@ -39,7 +39,10 @@ function CartPage() {
         <h1>Shopping Cart</h1>
         <div>{cartItemCards}</div>
       </div>
-      <div>Grand Total: {`$${grandTotal}`}</div>
+      <div>
+        Grand Total:{" "}
+        {`$${Math.round((grandTotal + Number.EPSILON) * 100) / 100}`}
+      </div>
     </div>
   );
 }
