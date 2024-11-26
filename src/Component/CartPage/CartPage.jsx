@@ -33,6 +33,10 @@ function CartPage() {
 
   console.log(cartItemCards);
 
+  function handleCheckout() {
+    alert("Work in progress 😎")
+  }
+
   return (
     <div className={styles.cartPage}>
       <div>
@@ -44,7 +48,7 @@ function CartPage() {
           Grand Total:{" "}
           {`$${Math.round((grandTotal + Number.EPSILON) * 100) / 100}`}
         </div>
-        <button type="button">Proceed to checkout</button>
+        <button type="button" onClick={handleCheckout}>Proceed to checkout</button>
       </div>
     </div>
   );
