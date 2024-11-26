@@ -1,6 +1,15 @@
+import { useOutletContext } from "react-router-dom";
 import styles from "./CartItemCard.module.css"
 
-function CartItemCard({ imgURL, title, price, quantity }) {
+function CartItemCard({ imgURL, title, price, quantity, itemId }) {
+
+  const {cartItems, setCartItems} = useOutletContext();
+
+  function handleRemoveButton() {
+    delete cartItems[itemId]
+    setCartItems({...cartItems})
+  }
+
   return (
     <div className={styles.cartItemCard}>
       <div><img src={imgURL} alt="" /></div>
@@ -10,7 +19,7 @@ function CartItemCard({ imgURL, title, price, quantity }) {
         <p>Quantity: {quantity}</p>
         <p>Total: {`$${price * quantity}`}</p>
       </div>
-      <div><button type="button">Remove</button></div>
+      <div><button type="button" onClick={handleRemoveButton}>Remove</button></div>
     </div>
   );
 }

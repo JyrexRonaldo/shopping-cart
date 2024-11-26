@@ -5,33 +5,29 @@ import styles from "./CartPage.module.css";
 function CartPage() {
   const { productsData, cartItems } = useOutletContext();
 
-  // console.log({productsData, cartItems})
-
-  console.log(cartItems);
-
   let cartItemCards = [];
   let grandTotal = 0;
 
   for (const key in cartItems) {
     if (Object.prototype.hasOwnProperty.call(cartItems, key)) {
-      // cartItemCards += key
+
       const itemInfo = productsData.find((product) => {
         return +key === product.id;
       });
-      console.log(itemInfo);
+
       grandTotal += itemInfo.price * cartItems[key];
+
       cartItemCards.push(
         <CartItemCard
           imgURL={itemInfo.image}
           title={itemInfo.title}
           price={itemInfo.price}
           quantity={cartItems[key]}
+          itemId={itemInfo.id}
         />
       );
     }
   }
-
-  console.log(cartItemCards);
 
   function handleCheckout() {
     alert("Work in progress 😎")
