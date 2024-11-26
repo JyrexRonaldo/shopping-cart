@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./ProductCard.module.css";
 import { useOutletContext } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function ProductCard({ imgURL, title, price, cardId }) {
   const [quantity, setQuantity] = useState(1);
@@ -20,7 +21,7 @@ function ProductCard({ imgURL, title, price, cardId }) {
       cartItems[cardId] += +quantity;
       setCartItems({ ...cartItems });
     }
-    setQuantity(1)
+    setQuantity(1);
   }
 
   return (
@@ -40,5 +41,12 @@ function ProductCard({ imgURL, title, price, cardId }) {
     </div>
   );
 }
+
+ProductCard.propTypes = {
+  imgURL: PropTypes.string,
+  title: PropTypes.string,
+  price: PropTypes.number,
+  cardId: PropTypes.number,
+};
 
 export default ProductCard;
