@@ -1,3 +1,27 @@
 .cartItemCard {
-    
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
 }
+
+.cartItemCard img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .cartItemCard > div:first-of-type {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cartItemCard > div:nth-of-type(2) {
+    width: 300px;
+    
+  }

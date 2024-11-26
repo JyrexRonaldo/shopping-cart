@@ -3,7 +3,7 @@ import styles from "./CartItemCard.module.css"
 function CartItemCard({ imgURL, title, price, quantity }) {
   return (
     <div className={styles.cartItemCard}>
-      <img src={imgURL} alt="" />
+      <div><img src={imgURL} alt="" /></div>
       <div>
         <p>{title}</p>
         <p>Price: {`$${price}`}</p>
