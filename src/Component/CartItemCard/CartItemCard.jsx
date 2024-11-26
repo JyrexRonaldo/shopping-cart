@@ -10,6 +10,8 @@ function CartItemCard({ imgURL, title, price, quantity, itemId }) {
     setCartItems({ ...cartItems });
   }
 
+  let totalPrice = Math.round(((price * quantity) + Number.EPSILON) * 100) / 100
+
   return (
     <div className={styles.cartItemCard}>
       <div>
@@ -19,7 +21,7 @@ function CartItemCard({ imgURL, title, price, quantity, itemId }) {
         <p>{title}</p>
         <p>Price: {`$${price}`}</p>
         <p>Quantity: {quantity}</p>
-        <p>Total: {`$${price * quantity}`}</p>
+        <p>Total: {`$${totalPrice}`}</p>
       </div>
       <div>
         <button type="button" onClick={handleRemoveButton}>
