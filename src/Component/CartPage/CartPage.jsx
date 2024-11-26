@@ -10,6 +10,7 @@ function CartPage() {
   console.log(cartItems);
 
   let cartItemCards = [];
+  let grandTotal = 0
 
   for (const key in cartItems) {
     if (Object.prototype.hasOwnProperty.call(cartItems, key)) {
@@ -18,6 +19,7 @@ function CartPage() {
         return +key === product.id;
       });
       console.log(itemInfo);
+      grandTotal += itemInfo.price * cartItems[key];
       cartItemCards.push(
         <CartItemCard
           imgURL={itemInfo.image}
@@ -37,7 +39,7 @@ function CartPage() {
         <h1>Shopping Cart</h1>
         <div>{cartItemCards}</div>
       </div>
-      <div></div>
+      <div>Grand Total: {`$${grandTotal}`}</div>
     </div>
   );
 }
