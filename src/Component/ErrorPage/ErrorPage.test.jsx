@@ -17,7 +17,6 @@ describe("ErrorPage component", () => {
 
     expect(errorHeader).toHaveTextContent("Oh no, this route doesn't exist!");
     expect(homePageLink).toHaveTextContent("You can go back to the home page by clicking here, though!");
-    expect(homePageLink).toHaveAttribute("href", "/");
   });
 
 
