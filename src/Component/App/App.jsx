@@ -8,6 +8,8 @@ function App() {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    console.log(productsData)
+
     useEffect(() => {
       fetch("https://fakestoreapi.com/products")
         .then((response) => {
