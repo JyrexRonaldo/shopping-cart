@@ -18,7 +18,7 @@ function CartPage() {
       grandTotal += itemInfo.price * cartItems[key];
 
       cartItemCards.push(
-        <CartItemCard
+        <CartItemCard key={itemInfo.id}
           imgURL={itemInfo.image}
           title={itemInfo.title}
           price={itemInfo.price}
