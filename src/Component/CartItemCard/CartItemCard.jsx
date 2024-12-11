@@ -1,9 +1,10 @@
-import { useOutletContext } from "react-router-dom";
 import styles from "./CartItemCard.module.css";
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import StoreDataContext from "../StoreDataContext/StoreDataContext";
 
 function CartItemCard({ imgURL, title, price, quantity, itemId }) {
-  const { cartItems, setCartItems } = useOutletContext();
+  const { cartItems, setCartItems } = useContext(StoreDataContext);
 
   function handleRemoveButton() {
     delete cartItems[itemId];

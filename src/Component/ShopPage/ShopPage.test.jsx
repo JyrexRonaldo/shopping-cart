@@ -32,6 +32,20 @@ vi.mock(import("react-router-dom"), async (importOriginal) => {
   };
 });
 
+
+vi.mock(import("react-router-dom"), async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    useOutletContext: () => ({
+      
+      error: false,
+      loading: false,
+    }),
+  };
+});
+
+
 describe("ShopPage component", () => {
   it.only("displays child components", () => {
     const mockProductData = {

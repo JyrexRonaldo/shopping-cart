@@ -1,9 +1,10 @@
-import { useOutletContext } from "react-router-dom";
 import CartItemCard from "../CartItemCard/CartItemCard";
 import styles from "./CartPage.module.css";
+import { useContext } from "react";
+import StoreDataContext from "../StoreDataContext/StoreDataContext";
 
 function CartPage() {
-  const { productsData, cartItems } = useOutletContext();
+  const { productsData, cartItems } = useContext(StoreDataContext);
 
   let cartItemCards = [];
   let grandTotal = 0;

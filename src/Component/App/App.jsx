@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import styles from "./App.module.css";
 import { useEffect, useState } from "react";
+import StoreDataContext from "../StoreDataContext/StoreDataContext";
 
 function App() {
   const useProductsData = () => {
@@ -26,12 +27,11 @@ function App() {
 
   const [cartItems, setCartItems] = useState({});
 
-  let totalCartItems = 0
+  let totalCartItems = 0;
 
   for (const key in cartItems) {
     if (Object.prototype.hasOwnProperty.call(cartItems, key)) {
-      totalCartItems += +cartItems[key]
-      
+      totalCartItems += +cartItems[key];
     }
   }
 
@@ -55,7 +55,10 @@ function App() {
           </li>
         </ul>
       </nav>
-      <Outlet context={outletData} />
+
+      <StoreDataContext.Provider value={outletData}>
+        <Outlet />
+      </StoreDataContext.Provider>
     </div>
   );
 }
