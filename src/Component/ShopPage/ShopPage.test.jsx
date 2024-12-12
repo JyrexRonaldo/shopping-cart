@@ -2,6 +2,7 @@ import ShopPage from "./ShopPage";
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import StoreDataContext from "../StoreDataContext/StoreDataContext";
 
 vi.mock("../ProductCard/ProductCard", () => {
   return {
@@ -13,11 +14,16 @@ vi.mock("../ProductCard/ProductCard", () => {
   };
 });
 
-vi.mock(import("react-router-dom"), async (importOriginal) => {
-  const actual = await importOriginal();
-  return {
-    ...actual,
-    useOutletContext: () => ({
+describe("ShopPage component", () => {
+  it("displays child components", () => {
+    const mockProductData = {
+      imgURL: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      price: 109.95,
+      cardId: 1,
+    };
+
+    const contextData = ({
       productsData: [
         {
           id: 1,
@@ -28,44 +34,56 @@ vi.mock(import("react-router-dom"), async (importOriginal) => {
       ],
       error: false,
       loading: false,
-    }),
-  };
-});
-
-
-vi.mock(import("react-router-dom"), async (importOriginal) => {
-  const actual = await importOriginal();
-  return {
-    ...actual,
-    useOutletContext: () => ({
-      
-      error: false,
-      loading: false,
-    }),
-  };
-});
-
-
-describe("ShopPage component", () => {
-  it.only("displays child components", () => {
-    const mockProductData = {
-      imgURL: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      cardId: 1,
-    };
+    })
 
     render(
       <BrowserRouter>
-        <ShopPage />
+        <StoreDataContext.Provider value={contextData}>
+          <ShopPage />
+        </StoreDataContext.Provider>
       </BrowserRouter>
     );
 
-    screen.debug();
-
-    console.log(screen.getByTestId("productCard").textContent);
 
     expect(screen.getByTestId("productCard").textContent).toEqual(
-      JSON.stringify(mockProductData));
+      JSON.stringify(mockProductData)
+    );
   });
+
+  it("display loading screen when data is unavailable", () => {
+    const contextData = ({
+      productsData: null,
+      error: false,
+      loading: true,
+    })
+
+    render(
+      <BrowserRouter>
+        <StoreDataContext.Provider value={contextData}>
+          <ShopPage />
+        </StoreDataContext.Provider>
+      </BrowserRouter>
+    );
+
+    expect(screen.getByRole("paragraph").textContent).toEqual("Loading...")
+  })
+
+
+  it("display error message when data fetch fails", () => {
+    const contextData = ({
+      productsData: null,
+      error: true,
+      loading: false,
+    })
+
+    render(
+      <BrowserRouter>
+        <StoreDataContext.Provider value={contextData}>
+          <ShopPage />
+        </StoreDataContext.Provider>
+      </BrowserRouter>
+    );
+
+    expect(screen.getByRole("paragraph").textContent).toEqual("A network error was encountered")
+  })
 });
