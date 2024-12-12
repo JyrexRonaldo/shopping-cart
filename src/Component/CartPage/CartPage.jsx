@@ -41,10 +41,10 @@ function CartPage() {
         <div>{cartItemCards}</div>
       </div>
       <div>
-        <div>
+        <p>
           Grand Total:{" "}
           {`$${Math.round((grandTotal + Number.EPSILON) * 100) / 100}`}
-        </div>
+        </p>
         <button type="button" onClick={handleCheckout}>Proceed to checkout</button>
       </div>
     </div>

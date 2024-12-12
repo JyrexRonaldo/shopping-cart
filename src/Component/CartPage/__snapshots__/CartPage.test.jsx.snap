@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartPage component > displays elements as expected 1`] = `
+<div>
+  <div
+    class="_cartPage_848a55"
+  >
+    <div>
+      <h1>
+        Shopping Cart
+      </h1>
+      <div />
+    </div>
+    <div>
+      <p>
+        Grand Total:
+         
+        $0
+      </p>
+      <button
+        type="button"
+      >
+        Proceed to checkout
+      </button>
+    </div>
+  </div>
+</div>
+`;

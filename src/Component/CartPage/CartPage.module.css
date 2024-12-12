@@ -40,7 +40,7 @@
   
 }
 
-.cartPage > div:nth-child(2) > div {
+.cartPage > div:nth-child(2) > p {
   font-weight: bolder;
   font-size: 1.8rem;
 }
