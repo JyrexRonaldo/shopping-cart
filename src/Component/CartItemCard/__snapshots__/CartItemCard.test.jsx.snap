@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartItemCard component > it displays elements with props supplied 1`] = `
+<div>
+  <div
+    class="_cartItemCard_3a5faf"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <div>
+      <p>
+        cool shirt
+      </p>
+      <p>
+        Price: 
+        $429
+      </p>
+      <p>
+        Quantity: 
+        2
+      </p>
+      <p>
+        Total: 
+        $858
+      </p>
+    </div>
+    <div>
+      <button
+        type="button"
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
+`;
