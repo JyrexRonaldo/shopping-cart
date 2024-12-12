@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > it displays home page items 1`] = `
+<div>
+  <div
+    class="_app_d1d56a"
+  >
+    <nav
+      class="_navBar_d1d56a"
+    >
+      <a
+        href="/"
+      >
+        <p>
+          Suburban
+        </p>
+      </a>
+      <ul>
+        <li>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/shop"
+          >
+            Shop
+          </a>
+        </li>
+        <li>
+          <a
+            href="/cart"
+          >
+            Cart 
+            (0)
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
