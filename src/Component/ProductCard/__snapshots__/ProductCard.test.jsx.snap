@@ -1,0 +1,232 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductCard component > input  1`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProductCard component > input field  1`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProductCard component > input field updates as expected 1`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProductCard component > input field updatses as  1`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProductCard component > input field updatses as expected 1`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProductCard component > it displays elements with props supplied 1`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProductCard component > it displays elements with props supplied 2`] = `
+<div>
+  <div
+    class="_card_371a27"
+  >
+    <div>
+      <img
+        alt=""
+        src="image of item"
+      />
+    </div>
+    <p>
+      cool shirt
+    </p>
+    <p>
+      $429
+    </p>
+    <div>
+      Quantity:
+      <input
+        type="number"
+        value="1"
+      />
+    </div>
+    <button
+      type="button"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
+`;
