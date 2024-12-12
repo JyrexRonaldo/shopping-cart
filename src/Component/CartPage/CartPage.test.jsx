@@ -1,16 +1,16 @@
 import { describe, expect, it } from "vitest";
 import CartPage from "./CartPage";
 import { render, screen } from "@testing-library/react";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 describe("CartPage component", () => {
   it("displays elements as expected", () => {
     const testProductData = {};
 
     const { container } = render(
-      <StoreDataContext.Provider value={testProductData}>
+      <StoreContext.Provider value={testProductData}>
         <CartPage />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     );
 
     expect(container).toMatchSnapshot();
@@ -42,9 +42,9 @@ describe("CartPage component", () => {
     const testProductData = {productsData, cartItems};
 
     render(
-      <StoreDataContext.Provider value={testProductData}>
+      <StoreContext.Provider value={testProductData}>
         <CartPage />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     );
 
     const paragraghs = screen.getAllByRole('paragraph')

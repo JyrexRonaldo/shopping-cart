@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import styles from "./ProductCard.module.css";
 import PropTypes from "prop-types";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 function ProductCard({ imgURL, title, price, cardId }) {
   const [quantity, setQuantity] = useState(1);
@@ -10,7 +10,7 @@ function ProductCard({ imgURL, title, price, cardId }) {
     setQuantity(e.target.value);
   }
 
-  const { cartItems, setCartItems } = useContext(StoreDataContext);
+  const { cartItems, setCartItems } = useContext(StoreContext);
 
   function handleAddToCart() {
     if (quantity < 1) {

@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import CartItemCard from "./CartItemCard";
 import { describe, it, expect } from "vitest";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 
 describe("CartItemCard component", () => {
@@ -17,7 +17,7 @@ describe("CartItemCard component", () => {
     const contextData = {};
 
     const { container } = render(
-      <StoreDataContext.Provider value={contextData}>
+      <StoreContext.Provider value={contextData}>
         <CartItemCard
           imgURL={mockItemData.imgURl}
           title={mockItemData.title}
@@ -25,7 +25,7 @@ describe("CartItemCard component", () => {
           quantity={2}
           itemId={1}
         />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     );
     expect(container).toMatchSnapshot();
   });

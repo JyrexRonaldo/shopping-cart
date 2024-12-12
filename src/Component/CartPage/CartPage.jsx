@@ -1,10 +1,10 @@
 import CartItemCard from "../CartItemCard/CartItemCard";
 import styles from "./CartPage.module.css";
 import { useContext } from "react";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 function CartPage() {
-  const { productsData, cartItems } = useContext(StoreDataContext);
+  const { productsData, cartItems } = useContext(StoreContext);
 
   let cartItemCards = [];
   let grandTotal = 0;

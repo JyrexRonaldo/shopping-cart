@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import ProductCard from "./ProductCard";
 import { describe, it, expect } from "vitest";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 import userEvent from "@testing-library/user-event";
 
 describe("ProductCard component", () => {
@@ -16,14 +16,14 @@ describe("ProductCard component", () => {
     const contextData = {};
 
     const { container } = render(
-      <StoreDataContext.Provider value={contextData}>
+      <StoreContext.Provider value={contextData}>
         <ProductCard
           imgURL={mockItemData.imgURl}
           title={mockItemData.title}
           price={mockItemData.price}
           cardId={mockItemData.card}
         />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     );
     expect(container).toMatchSnapshot();
   });
@@ -41,14 +41,14 @@ describe("ProductCard component", () => {
     const contextData = {};
 
     render(
-      <StoreDataContext.Provider value={contextData}>
+      <StoreContext.Provider value={contextData}>
         <ProductCard
           imgURL={mockItemData.imgURl}
           title={mockItemData.title}
           price={mockItemData.price}
           cardId={mockItemData.card}
         />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     );
 
     const quantityInput = screen.getByRole("spinbutton");
@@ -70,14 +70,14 @@ describe("ProductCard component", () => {
     const contextData = {};
 
     render(
-      <StoreDataContext.Provider value={contextData}>
+      <StoreContext.Provider value={contextData}>
         <ProductCard
           imgURL={mockItemData.imgURl}
           title={mockItemData.title}
           price={mockItemData.price}
           cardId={mockItemData.card}
         />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     );
 
     const quantityInput = screen.getByRole("spinbutton");

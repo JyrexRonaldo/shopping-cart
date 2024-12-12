@@ -1,10 +1,10 @@
 import styles from "./ShopPage.module.css";
 import ProductCard from "../ProductCard/ProductCard";
 import { useContext } from "react";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 function ShopPage() {
-  const { productsData, error, loading } = useContext(StoreDataContext);
+  const { productsData, error, loading } = useContext(StoreContext);
 
   if (loading) return  <div className={styles.shopPage}><p className={styles.errorMessage}>Loading...</p></div>;
   if (error) return  <div className={styles.shopPage}><p className={styles.errorMessage}>A network error was encountered</p></div>;

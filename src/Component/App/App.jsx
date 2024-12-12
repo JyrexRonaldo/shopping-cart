@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import styles from "./App.module.css";
 import { useEffect, useState } from "react";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 function App() {
   const useProductsData = () => {
@@ -56,9 +56,9 @@ function App() {
         </ul>
       </nav>
 
-      <StoreDataContext.Provider value={outletData}>
+      <StoreContext.Provider value={outletData}>
         <Outlet />
-      </StoreDataContext.Provider>
+      </StoreContext.Provider>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import styles from "./CartItemCard.module.css";
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 function CartItemCard({ imgURL, title, price, quantity, itemId }) {
-  const { cartItems, setCartItems } = useContext(StoreDataContext);
+  const { cartItems, setCartItems } = useContext(StoreContext);
 
   function handleRemoveButton() {
     delete cartItems[itemId];

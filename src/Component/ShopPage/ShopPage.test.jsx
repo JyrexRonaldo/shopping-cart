@@ -2,7 +2,7 @@ import ShopPage from "./ShopPage";
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import StoreDataContext from "../StoreDataContext/StoreDataContext";
+import StoreContext from "../StoreContext/StoreContext";
 
 vi.mock("../ProductCard/ProductCard", () => {
   return {
@@ -38,9 +38,9 @@ describe("ShopPage component", () => {
 
     render(
       <BrowserRouter>
-        <StoreDataContext.Provider value={contextData}>
+        <StoreContext.Provider value={contextData}>
           <ShopPage />
-        </StoreDataContext.Provider>
+        </StoreContext.Provider>
       </BrowserRouter>
     );
 
@@ -59,9 +59,9 @@ describe("ShopPage component", () => {
 
     render(
       <BrowserRouter>
-        <StoreDataContext.Provider value={contextData}>
+        <StoreContext.Provider value={contextData}>
           <ShopPage />
-        </StoreDataContext.Provider>
+        </StoreContext.Provider>
       </BrowserRouter>
     );
 
@@ -78,9 +78,9 @@ describe("ShopPage component", () => {
 
     render(
       <BrowserRouter>
-        <StoreDataContext.Provider value={contextData}>
+        <StoreContext.Provider value={contextData}>
           <ShopPage />
-        </StoreDataContext.Provider>
+        </StoreContext.Provider>
       </BrowserRouter>
     );
 
